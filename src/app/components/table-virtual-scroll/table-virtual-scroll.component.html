@@ -1,0 +1,22 @@
+<!-- test <code>{{dataSource[0].spaceName}}</code> -->
+
+<div class="container" *ngIf="dataSource[0].spaceName">
+  <div class="row" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="5" (scrolled)="onScroll()"
+    [scrollWindow]="false" style="height: 400px; overflow-y: scroll;">
+    <mat-table #table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="spaceName">
+        <mat-header-cell *matHeaderCellDef> Page </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.spaceName}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Index </mat-header-cell>
+        <mat-cell *matCellDef="let task"> {{task.name}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>

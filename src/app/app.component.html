@@ -1,4 +1,58 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<app-table-scrollable></app-table-scrollable>
+
+<!-- <app-table-infinite></app-table-infinite> -->
+
+<!-- <section class="main-content" role="main-content">
+  <div class="wrapper">
+    <mat-table [dataSource]="matDataSource.data"
+      class="mat-elevation-z0 mat-table hox-table-striped medium-table--11"
+      matSort>
+
+      <ng-container matColumnDef="spaceName">
+        <mat-header-cell *matHeaderCellDef class="mw-90" mat-sort-header>{{"space.name"}}
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" class="mw-90" fxLayoutAlign="flex-start flex-start">
+          <span class="ml-5 mt-5">{{element?.spaceName}}</span>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="currentReservation">
+        <mat-header-cell *matHeaderCellDef class="mw-130">{{"guest.current-reservation"}}
+        </mat-header-cell>
+        <mat-cell *matCellDef="let task" class="mw-130">
+          <span class="ml-5 mt-5">{{task?.currentReservation}}</span>
+
+</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="nextReservation">
+  <mat-header-cell *matHeaderCellDef class="mw-130">{{"guest.next-reservation"}}
+  </mat-header-cell>
+  <mat-cell *matCellDef="let task" class="mw-130">
+    <span class="ml-5 mt-5">{{task?.nextReservation}}</span>
+
+  </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="name">
+  <mat-header-cell *matHeaderCellDef mat-sort-header class="mw-130">Name
+  </mat-header-cell>
+  <mat-cell *matCellDef="let task" class="mw-130">
+    {{task?.name}}
+  </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="assigneeName">
+  <mat-header-cell *matHeaderCellDef mat-sort-header class="mw-110">{{ 'task.assignee' }}
+  </mat-header-cell>
+  <mat-cell *matCellDef="let element" class="mw-110">
+    {{element?.assigneeName}}
+  </mat-cell>
+</ng-container>
+
+<mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'is-priority': row.priority}"></mat-row>
+</mat-table>
+
+</div>
+</section> -->
